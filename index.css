@@ -1,0 +1,227 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&display=swap');
+
+/* Tipo de codigo da fontes*/
+
+/* .poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+} */
+
+/* .poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+} */
+:root {
+  --primary-color: #1a1a1a;
+  --secundary-color: #2a2a2a;
+  --accent-coloe: #4d4d4d;
+  --text-color: #fff;
+
+  /*Animação*/
+  --animation-color1: #ff4d4d;
+  --animation-color2: #4dff4d;
+  --animation-color3: #4d4dff;
+  --animation-color4: #ffff4d;
+
+  /*Cor de foco(quando estiver selecionado)*/
+  --focus-color: #fff;
+}
+
+/* Estilos Gerais */
+
+body{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  animation: fadeId 4s ease;
+}
+
+.container {
+  max-width: 425px;
+  width: 100%;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+body{
+  background: linear-gradient(45deg, var(--animation-color1), var(--animation-color2), var(--animation-color3), var(--animation-color4));
+  background-size: 850% 850%;
+
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+/*Animação login*/
+.animated-text {
+  text-align: center;
+
+  animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+  0%{
+    color: var(--animation-color1);
+  }
+  10%{
+    color: var(--animation-color2);
+  }
+  20%{
+    color: var(--animation-color3);
+  }
+  30%{
+    color: var(--animation-color4);
+  }
+  40%{
+    color: var(--animation-color1);
+  }
+  50%{
+    color: var(--animation-color2);
+  }
+  60%{
+    color: var(--animation-color3);
+  }
+  70%{
+    color: var(--animation-color4);
+  }
+  80%{
+    color: var(--animation-color1);
+  }
+  85%{
+    color: var(--animation-color2);
+  }
+  90%{
+    color: var(--animation-color3);
+  }
+  95%{
+    color: var(--animation-color4);
+  }
+  100%{
+    color: var(--animation-color1);
+  }
+}
+
+.animated-input {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  width: 45%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.animated-input:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.animated-input:focus {
+  border-color: var(--focus-color);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.animated-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--text-color);
+  margin: 0.2rem;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+
+  transition: backgroud-color 0.5s ease;
+}
+
+.animated-button:hover {
+  background-color: var(--animation-color1);
+}
+
+shadow-box {
+
+}
+
+.carousel-text {
+  display: flex;
+
+  animation: carousel 13s infinite ;
+
+  white-space: nowrap;
+  position: absolute;
+  top: 40%;
+  left: 0;
+
+  transform: translateY();
+}
+
+.carousel-text span {
+  font-size: 1.0rem;
+  margin-right: 2rem;
+  opacity: 0.6;
+
+  animation: ;
+}
+
+@keyframes carousel {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+   transform: translateX(-100%); 
+  }
+}
+
+@keyframes fadeInOut{
+  0%, 100%
+}
+/* Desing login */
+.login-box {
+  background-color: var(--secundary-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+
+  animation: pulsateShadow 2s infinite;
+}
+
+@keyframes plusateShadow {
+  0%{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+  }
+  50%{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 5);
+  }
+  100%{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+  }
+}
